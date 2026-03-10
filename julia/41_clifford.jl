@@ -3,38 +3,38 @@ using LinearAlgebra
 function main()
     # 1. 1-qubit Pauli / Clifford gates
     Id = ComplexF64[
-        1.0 0.0
-        0.0 1.0
+        1 0
+        0 1
     ]
     X = ComplexF64[
-        0.0 1.0
-        1.0 0.0
+        0 1
+        1 0
     ]
     Y = ComplexF64[
-        0.0 -im
-        im 0.0
+        0 -im
+        im 0
     ]
     Z = ComplexF64[
-        1.0 0.0
-        0.0 -1.0
+        1 0
+        0 -1
     ]
     H = (1 / sqrt(2)) * ComplexF64[
-        1.0 1.0
-        1.0 -1.0
+        1 1
+        1 -1
     ]
     S = ComplexF64[
-        1.0 0.0
-        0.0 im
+        1 0
+        0 im
     ]
 
     # 2-qubit gates (basis order: |00>, |01>, |10>, |11>)
     CNOT = ComplexF64[
-        1.0 0.0 0.0 0.0
-        0.0 1.0 0.0 0.0
-        0.0 0.0 0.0 1.0
-        0.0 0.0 1.0 0.0
+        1 0 0 0
+        0 1 0 0
+        0 0 0 1
+        0 0 1 0
     ]
-    CZ = Diagonal(ComplexF64[1.0, 1.0, 1.0, -1.0])
+    CZ = Diagonal(ComplexF64[1, 1, 1, -1])
 
     paulis = [Id, X, Y, Z]
     pauli_labels = ["I", "X", "Y", "Z"]
