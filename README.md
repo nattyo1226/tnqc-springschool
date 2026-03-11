@@ -26,7 +26,7 @@
     - 27_gate-teleportation
     - 31_statevector2mps
     - 32_tebd
-    - 41_clifford (python only)
+    - 41_clifford
 
 - [data](data): 実習で使用するデータファイル
 
